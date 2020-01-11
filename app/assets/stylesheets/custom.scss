@@ -56,21 +56,21 @@ p {
     border-color: #090909;
 }
 
-/* ヘッダー */
+/* ヘッダー 左ロゴ*/
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  font-style: italic;
 }
 
 #logo:hover {
-  color: #fff;
+  color: #777;
   text-decoration: none;
 }
 
