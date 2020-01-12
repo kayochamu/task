@@ -1,31 +1,85 @@
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Task App", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Top", root_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Users", '#' %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               <%= @current_user.name %>  <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Show", current_user %></li>
+              <li><%= link_to "Settings", '#' %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
 <% provide(:title, "Top") %>
-<div class="jumbotron">
-  <h1>サンプルアプリ</h1>
-  <p>
-    皆さんの手で、この最低限の土台となるアプリケーションから<br>
-    タスク管理機能を持ったアプリケーションへと作り替えていきましょう！
-  </p>
-
-  <p>現在このアプリケーションには、以下の機能が備わっています。</p>
-
-  <ul>
-    <li>ルートURLに対応したトップページ（このページです）</li>
-    <li>ユーザー機能
-      <ol>
-        <li>名前・メールアドレス・パスワード・ログイン認証用のカラムを持ったUserモデル</li>
-        <li>ユーザー新規登録と対応したページ</li>
-      </ol>
-    </li>
-    <li>ログイン機能
-      <ol>
-        <li>セッションによる一時的ログイン機能</li>
-        <li>Cookiesによる永続的ログイン機能</li>
-      </ol>
-    </li>
-  </ul>
-  <p>実質【勤怠チュートリアル第７章】までの機能を持ったアプリケーションとなります。</p>
-  <center>
-    <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
-    <%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
-  </center>
+ 
+ <div class="container">
+  <div class="row">
+   <div class="col-md-7">
+    <div class="center jumbotron" id="top-main">
+　　　<h1 id="top-main-title">TaskApp</h1>
+      <p>TaskAppは簡易ToDo管理ツールです。</p>
+      <p>↓↓初めてのご利用↓↓</p>
+      
+      <%= link_to 'アカウント作成', new_user_path(@user), class: "btn btn-lg btn-success" %>
+      
+     
+      
+      
+       
+       
+     
+      
+      
+      <link to>
+       <div style="margin-top: 10px;">
+         <a class="btn btn-danger" href="/guest-admin/login">ゲストログイン（管理権限）</a>
+         <a class="btn btn-warning" href="/guest/login">ゲストログイン（一般権限）</a>
+    </div>
+  </div>
 </div>
+
+  <div class="col-md-4">
+   <h1>ログイン</h1>
+    <form action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="f6DWUEmCKL98tW8C2zs945NDBx/XabBBhdeOoilS4v36D6s1X2t2LCW5TFx/zYk9gavKoDIRYH7lXz89VrhFIg==">
+        <label class="label-form" for="session_email">メールアドレス</label>
+        <input class="form-control" type="email" name="session[email]">
+       
+        <label class="label-form" for="session_password">パスワード</label>
+        <input class="form-control" type="password" name="session[password]">
+         <div style="margin-top: 10px;">
+            <label class="checkbox inline checkbox-login" for="remember-me">
+          <input name="session[remember_me]" type="hidden" value="0"><input id="remember-me" type="checkbox" value="1" name="session[remember_me]">
+          <span>ログイン情報を記憶する</span>
+</label>        
+        <input type="submit" name="commit" value="ログイン" class="btn btn-primary btn-block btn-form" data-disable-with="ログイン">
+</form>  </div>
+</div>
+
+      
+    </div>
+          
+          
+        
+        <input type="submit" name="commit" value="ログイン状態です" class="btn btn-primary btn-block btn-form" disabled="disabled" data-disable-with="ログイン状態です">
+</form>
+</div>
+</body>
+
+
