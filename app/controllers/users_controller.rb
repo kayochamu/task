@@ -1,12 +1,15 @@
 class UsersController < ApplicationController
+  before_action :set_user
+  before_action :set_task, only: %i(show edit update destroy new)
+ 
   
-  def show
+　 def show
     @user = User.find(params[:id])
-  end
+   end
 
-  def new
+   def new
     @user = User.new
-  end
+   end
   
   def create
     @user = User.new(user_params)
@@ -21,7 +24,21 @@ class UsersController < ApplicationController
   
   private
   
-    def user_params
+   def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
+   end
 end
+
+
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    
+    def set_task
+      @task = Task.find_by(params[:id])
+    end
+ 
+
+  
+  
