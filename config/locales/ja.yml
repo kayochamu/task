@@ -1,0 +1,42 @@
+
+ja:
+  activerecord:
+    models:
+      user:
+    attributes:
+        user:
+          id: ID
+          name: 名前
+          email: 
+          password: 
+          password_confirmation: 
+          description: 内容
+          created_at: 登録日時
+          updated_at: 更新日時
+        
+        
+        ja:
+  activerecord:
+    models:
+      task:
+    attributes:
+        task:
+          id: ID
+          name: 名前
+          email: 
+          password: 
+          password_confirmation: 
+          description: 内容
+          created_at: 登録日時
+          updated_at: 更新日時
+    
+    formats:
+  default: "%Y/%m/%d"
+  long: "%Y年%m月%d日(%a)"
+  middle: "%Y年%m月"
+  short: "%-m/%-d"       
+  
+  
+ 
+  
+  

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user
-  before_action :set_task, only: %i(show edit update destroy new)
+  before_action :set_task, only: %i(show edit update destroy)
  
   
 　 def show
