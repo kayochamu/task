@@ -1,0 +1,24 @@
+<% provide(:title, 'edit') %>
+
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+<%= form_with(model: @task, url: user_tasks_path(@user), local: true) do |f| %>
+<%= render partial: 'shared/error_messages', locals: { obj: @task } %>
+<%= f.label :名称, class: "label-form" %>
+<%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :詳細, class: "label-form" %>
+  <%= f.text_area :content, rows: 5, class: "form-control" %>
+
+ <%= link_to "更新", user_task_path(@user, task), class: "btn btn-primary btn-form" %>
+ <%= link_to "キャンセル", user_tasks_path(@user, task), class: "btn btn-default btn-form" %>
+    <% end %>
+  </div>          
+
+              
+     
+</div>
+
+
+      
