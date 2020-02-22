@@ -30,9 +30,18 @@
           <th class="active">更新日</th>
           <td><%= l(@task.updated_at,format: :long) %></td>
         </tr>
-      </tbody>
-    </table>
-
+        
+      
+	      </tr>
+	    </tbody>
+	  </table>
+	  <div>
+      <%= link_to "編集", edit_user_task_path(@user.id, @task.id), class: "btn btn-lg btn-success" %>
+      <%= link_to "削除", user_task_path(@user, @task), method: :delete, data:{ confirm: '本当によろしいですか？'}, class: "btn btn-danger btn-lg" %>
+	  </div>
+  </div>
+</div>
+            
 
 
 

@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-    
+   @task = @user.tasks.find(params[:id])
   end
   
   def update
