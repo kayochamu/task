@@ -26,7 +26,7 @@ ja:
           email: 
           password: 
           password_confirmation: 
-          description: 内容
+          content: 内容
           created_at: 登録日時
           updated_at: 更新日時
     
