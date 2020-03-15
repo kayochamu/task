@@ -7,13 +7,16 @@ ja:
         user:
           id: ID
           name: 名前
-          email: 
+          email: メールアドレス
           password: 
           password_confirmation: 
           description: 内容
           created_at: 登録日時
           updated_at: 更新日時
-        
+    
+      
+  
+      
         
         ja:
   activerecord:

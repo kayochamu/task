@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'rails',        '~> 5.1.6'
 gem 'rails-i18n'
 gem 'bcrypt'
-gem 'faker'
+gem 'faker'# サンプルユーザー作成
+gem 'will_paginate' # データ多い時次のページへいけるやつ
+gem 'bootstrap-will_paginate' # ブーツストラップに合わせたデザインのページネーション
 gem 'bootstrap-sass'
 gem 'puma',         '~> 3.7'
 gem 'sass-rails',   '~> 5.0'
