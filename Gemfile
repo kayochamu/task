@@ -7,7 +7,7 @@ gem 'faker'# サンプルユーザー作成
 gem 'will_paginate' # データ多い時次のページへいけるやつ
 gem 'bootstrap-will_paginate' # ブーツストラップに合わせたデザインのページネーション
 gem 'bootstrap-sass'
-gem 'puma',         '~> 3.7'
+gem 'puma',         '~> 4.3'
 gem 'sass-rails',   '~> 5.0'
 gem 'uglifier',     '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
